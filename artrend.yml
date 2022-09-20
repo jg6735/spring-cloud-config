@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/artrend?serverTimezone=UTC&characterEncoding=UTF-8
+    usernmae: root
+    password: ssafy
+
+gateway:
+  ip: 172.20.0.9
