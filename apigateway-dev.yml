@@ -20,6 +20,20 @@ spring:
     password: guest
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          "[/**]":
+            allowedOrigins: "http://localhost"
+            allowedHeaders:
+              - authorization
+              - content-type
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - OPTIONS
+              - HEAD
+              - DELETE
       routes:
         - id: business-service
           uri: lb://BUSINESS-SERVICE

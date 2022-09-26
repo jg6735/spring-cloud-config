@@ -32,6 +32,22 @@ spring:
   sql:
     init:
       mode: always
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          "[/**]":
+            allowedOrigins: "http://localhost"
+            allowedHeaders:
+              - authorization
+              - content-type
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - OPTIONS
+              - HEAD
+              - DELETE
 
 logging:
   level:
@@ -44,7 +60,7 @@ logging:
 
 eureka:
   instance:
-    instance-id: ${spring.cloud.client.hostname}:${spring.application.instance-id:${random.value}}
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     register-with-eureka: true
     fetch-registry: true

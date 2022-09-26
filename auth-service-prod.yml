@@ -4,9 +4,11 @@ server:
 spring:
   application:
     name: auth-service
+  profiles:
+    include: oauthprod
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/artrend?serverTimezone=UTC&characterEncoding=UTF-8
+    url: jdbc:mysql://mysql:3306/artrend?serverTimezone=UTC&characterEncoding=UTF-8
     username: root
     password: ssafy
   jpa:
@@ -27,6 +29,22 @@ spring:
   zipkin:
     base-url: http://127.0.0.1:9411
     enabled: true
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          "[/**]":
+            allowedOrigins: "http://j7c104.p.ssafy.io"
+            allowedHeaders:
+              - authorization
+              - content-type
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - OPTIONS
+              - HEAD
+              - DELETE
 
 jwt:
   secret: c2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQtc2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQK
@@ -54,7 +72,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh, health, beans, httptrace, busrefresh
+        include: refresh, health, beans, busrefresh, info, metrics, prometheus
 
 gateway:
   ip: 172.25.0.6
