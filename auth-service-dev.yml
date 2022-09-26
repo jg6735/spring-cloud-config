@@ -6,8 +6,6 @@ server:
 #    key-store-password: ssafyartrendpjt
 
 spring:
-  profiles:
-    include: oauth
   application:
     name: auth-service
   datasource:
