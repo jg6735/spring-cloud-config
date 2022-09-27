@@ -22,7 +22,7 @@ spring:
     base-url: http://127.0.0.1:9411
     enabled: true
   jpa:
-    show-sql: true
+    show-sql: false
     generate-ddl: true
     hibernate:
       ddl-auto: create-drop
@@ -53,7 +53,7 @@ spring:
 
 logging:
   level:
-    # com.artrend.businessservice: DEBUG
+    com.artrend.businessservice: DEBUG
     org:
       springframework:
         web:
