@@ -55,6 +55,12 @@ logging:
   level:
     com.artrend.businessservice: DEBUG
     org:
+      springframework:
+        web:
+          reactive:
+            function:
+              client:
+                ExchangeFunctions: DEBUG
       hibernate:
         type:
           descriptor:
