@@ -6,13 +6,6 @@ server:
 #    key-store-password: ssafyartrendpjt
 
 spring:
-  application:
-    name: business-service
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/artrend?serverTimezone=UTC&characterEncoding=UTF-8
-    username: root
-    password: ssafy
   rabbitmq:
     host: 127.0.0.1
     port: 5672
@@ -25,7 +18,7 @@ spring:
     show-sql: true
     generate-ddl: true
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
     properties:
       hibernate:
         format_sql: true
