@@ -1,20 +1,4 @@
 spring:
-  cloud:
-    gateway:
-      globalcors:
-        cors-configurations:
-          "[/**]":
-            allowedOrigins: "http://j7c104.p.ssafy.io"
-            allowedHeaders:
-              - authorization
-              - content-type
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - OPTIONS
-              - HEAD
-              - DELETE
   datasource:
     url: jdbc:mysql://mysql:3306/artrend?serverTimezone=UTC&characterEncoding=UTF-8
     driver-class-name: com.mysql.cj.jdbc.Driver
