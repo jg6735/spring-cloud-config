@@ -17,5 +17,6 @@ spring:
     multipart:
       maxFileSize: 100MB
       maxRequestSize: 100MB
+      enabled: true
     defer-datasource-initialization: true
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
