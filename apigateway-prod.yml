@@ -1,8 +1,8 @@
-server:
-  ssl:
-    key-store: classpath:keystore.p12
-    key-store-type: PKCS12
-    key-store-password: ssafyartrend
+# server:
+#   ssl:
+#     key-store: classpath:keystore.p12
+#     key-store-type: PKCS12
+#     key-store-password: ssafyartrend
 
 jwt:
   secret: c2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQtc2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQK
